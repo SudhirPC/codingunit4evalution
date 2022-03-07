@@ -14,7 +14,7 @@ const Permissioncheck=(req,res,next)=>{
 app.use(Permissioncheck)
 
 
-app.get("/",(req,res)=>{
+app.get("/books",(req,res)=>{
 
     res.send(
         {
@@ -24,17 +24,17 @@ app.get("/",(req,res)=>{
     res.end();
 })
 
-app.get("/",(req,res)=>{
+app.get("/libraries",(req,res)=>{
 
     res.send(
         {
-            route:"/books",permission:true
+            route:"/libraries",permission:true
         }
     );
     res.end();
 })
 
-app.get("/",(req,res)=>{
+app.get("/authors",(req,res)=>{
 
     res.send(
         {
